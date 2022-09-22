@@ -1,0 +1,12 @@
+lable{
+    display: block;
+    padding-bottom: 0.7rem;
+}
+button{
+    display: block;
+    margin: auto;
+    border: 0.5rem;
+}
+body{
+    text-align: center;
+}
