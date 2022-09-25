@@ -4,34 +4,37 @@ const currentPrice=document.querySelector("#current-price");
 const output=document.querySelector("#output-message");
 const submitBtn=document.querySelector("#submit-btn");
 
-function calculateProfitAndLoss(initialPrice,quantity,currentPrice)
+function calculateProfitAndLoss(IP,NS,CP)
 {
-    if(initialPrice>currentPrice)
+    if(IP>CP)
     {
-        var loss=(initialPrice-currentPrice)*quantity;
-        var lossPercentage=(loss/initialPrice)*100;
+        var loss=(IP-CP)*NS;
+        var lossPercentage =(loss/IP)*100;
         console.log("loss"+loss);
-        output.innerText="LOSS "
+        output.innerText="THE LOSS IS RS."+loss+" AND THE LOSS PERCENTAGE IS  "+lossPercentage+" %";
+        //output.innerHTML='<div style="background-color:red; color:white;padding:1rem;width:300px;flex:">THE LOSS IS Rs.${loss}  AND LOSS PERCENTAGE IS ${lossPercentage} %   :( "</div>';
     }
-    else if(currentPrice===initialPrice)
+    else if(CP===IP)
     {
-       // console.log("No pain No gain No gain No pain")
-       output.innerText="Equal price";
+          output.innerText="NIETHER PROFIT NOR LOSS ";
     }
-    else if(initialPrice<currentPrice)
+    else if(CP>IP)
     {
-        var profit=(currentPrice-initialPrice)*quantity;
-        var profitPercentage=(profit/initialPrice)*100;
+        var profit=(CP-IP)*NS;
+        var profitPercentage=(profit/IP)*100;
         console.log("profit"+profit);
+        output.innerText="THE PROFIT IS Rs."+profit+" AND PROFIT PERCENTAEG IS "+profitPercentage+" %";
     }
-    console.log(currentPrice);
-    console.log(initialPrice);
+    console.log(CP);
+    console.log(IP);
 }
-function eventHandler()
+
+submitBtn.addEventListener('click',ValuesToNumbers);
+function ValuesToNumbers()
 {
-
+    
+    var IP=Number(initialprice.value);
+    var NS=Number(NoOfStocks.value);
+    var CP=Number(currentPrice.value);
+    calculateProfitAndLoss(IP,NS,CP);
 }
-
-submitBtn.addEventListener('click',calculateProfitAndLoss(
-    Number(initialprice.value),Number(NoOfStocks.value),Number(currentPrice.value)
-));

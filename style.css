@@ -1,12 +1,45 @@
-lable{
-    display: block;
-    padding-bottom: 0.7rem;
-}
-button{
-    display: block;
-    margin: auto;
-    border: 0.5rem;
+h1{
+    padding-bottom: 1.5rem;
+    padding-top: 2rem;
 }
 body{
     text-align: center;
+    color: #7f1d1d;
+    font-weight: bold;
+    }
+.lable{
+    display: block;
+    padding-bottom: 0.7rem;
+    font-size: large;
+}
+.btn{
+    background-color: #7f1d1d;
+    border: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    height: 50px;
+    width: 200px;
+    font-size: large;
+    color: white;
+
+    
+}
+.input-details{
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.input-div{
+    padding: 0.5rem;
+    margin: 10px;
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border-style:outset;
+}
+.output-details{
+    padding: 0.5rem;
+    margin: 30px;  
 }

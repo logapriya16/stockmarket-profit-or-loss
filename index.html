@@ -5,25 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet"/>
-    <title>Stock Market -Mark 14</title>
+    <title>Stock Market 🚀 Mark 14</title>
 </head>
 <body>
-    <h1>Mark 14 Stock Market</h1>
+    <h1>STOCK MARKET PROFIT/LOSS CALCULATER</h1>
     <main>
-        <lable for="initial-price">Initial price
-            <input id="initial-price" type="number" placeholder="Enter the Initial Price here" />
+        <div class="input-details">
+        <lable class="lable" for="initial-price">BUY PRICE :
+            <input id="initial-price" type="number" class="input-div" placeholder=" Initial Price of stocks" />
         </lable>
-        <lable for="stocks-quantity">Quantity of the Stocks
-            <input id="stocks-quantity" type="number" placeholder="Enter the Number of Stocks bought"/>
+        <lable for="stocks-quantity" class="lable">NO OF SHARES:
+            <input id="stocks-quantity" type="number" class="input-div" placeholder="No of Stocks bought"/>
         </lable>
-        <label for="current-price">Current Price
-            <input id="current-price" type="number" placeholder="Enter the current Price of the Stocks" />
-        </label><br>
-        <button id="submit-btn">Tell Me !</button>
-        <div id="output-message">
-
+        <label for="current-price" class="lable">SELL PRICE:
+            <input id="current-price" type="number" class="input-div" placeholder="Current Price of Stocks" />
+        </label>
+        <br>
+        <button id="submit-btn" class="btn">CALCULATE</button>
         </div>
+        <div id="output-message" class="output-details"></div>
     </main>
+    <footer>
+
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
